@@ -5,62 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="girchi.css">
-    <script src="girchi.js"></script>
+
+    <script src="girchi.js"></script>  
+    <link href="dist/output.css" rel="stylesheet">
+
 
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <img class="sitelogo" src="images/sitelogo.png" alt="">
-        <h1 class="sitelogo-text">გირჩი</h1>
+<body class="bg-[#E5E5E5]">
+    <header class="w-[1920px] h-[72px] bg-[#FFFFFF] flex items-center">
+        <img class="ml-[288px]" src="images/sitelogo.png" alt="">
+        <h1 class="font-[700] text-[24px] leading-[14px] text-[#327F37] ml-[16px]">გირჩი</h1>
 
-        <ul class="nav-ul">
-            <li class="nav-li" >პოლიტიკოსები</li>
-            <li class="nav-li" >ანალიტიკა</li>
-            <li class="nav-li" >სიახლეები</li>
-            <li class="nav-li" >პროექტები</li>
-            <li class="nav-li" >გაზეთი</li>
+        <ul class="flex ml-[481px]">
+            <li class="inline-block pr-[24px] cursor-pointer" >პოლიტიკოსები</li>
+            <li class="inline-block pr-[24px] cursor-pointer" >ანალიტიკა</li>
+            <li class="inline-block pr-[24px] cursor-pointer" >სიახლეები</li>
+            <li class="inline-block pr-[24px] cursor-pointer" >პროექტები</li>
+            <li class="inline-block pr-[24px] cursor-pointer" >გაზეთი</li>
         </ul>
-        <div class="login-div"><h1 class="login-text">ავტორიზაცია</h1></div>
+        <div class="flex flex-row justify-center items-center w-[136px] h-[40px] bg-[#1A8917] rounded-[32px] cursor-pointer gap-[4px] pt-[8px] pb-[8px] pr-[16px] pl-[16px] "><h1 class="font-[500] text-[14px] leading-[24px] tracking-[0.02em] text-[#ffffff]">ავტორიზაცია</h1></div>
     </header>
-    <section class="section1">
-        <div class="gadaricxva">
-            <h1 class="title">გადარიცხვა</h1>
-            <div>
-                <label class="mimgebi" for="name">მიმღები</label>
-            <input class="input" id="name" type="text" placeholder="სახელი-გვარი / პირადი ნომერი / მომხმარებლის ID">
+    <section class="ml-[516px] mt-[32px] flex ">
+        <div class="w-[546px] h-[284px] rounded-[8px] p-[28px] gap-[24px] flex flex-col items-start bg-[#FFFFFF]">
+            <h1 class="text-[20px] font-[700] leading-[24px] flex items-center uppercase text-[#292D33]">გადარიცხვა</h1>
+            <div class="">
+                <label class="font-[500] mt-[-48px] text-[12px] leading-[16px] text-[#292D33]" for="name">მიმღები</label>
+            <input class="flex justify-between items-center p-[10px] gap-[8px] bg-[#FFFFFF] border-solid border-[1px] border-[#E0E2E7] rounded-[6px] w-[490px] h-[44px] box-border flex-row placeholder:font-[500] placeholder:text-[14px] placeholder:leading-[16px]" id="name" type="text" placeholder="სახელი-გვარი / პირადი ნომერი / მომხმარებლის ID">
             </div>
-            <div class="rectangle"></div>
-            <div class="next">
-                <p class="text-for-next">შემდეგი</p>
-                <img class="image-for-next" src="images/coolicon.png" alt="">
+            <div class="w-[490px] h-[1px] bg-[#E0E2E7] mt-[23.5px]"></div>
+            <div class="flex flex-row justify-center items-center pt-[8px] pb-[8px] pl-[16px] pr-[16px] gap-[4px] w-[111px] h-[40px] bg-[#727a8229] rounded-[32px] ml-[379px]">
+                <p class="text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]">შემდეგი</p>
+                <img class="" src="images/coolicon.png" alt="">
             </div>
         </div>
-        <div class="balansi-div">
+        <div class="flex flex-col items-start p-[28px] gap-[24px] w-[318px] h-[263px] bg-[#FFFFFF] rounded-[8px] ml-[24px]">
             <div class="banalsi1">
             <div>
-                <h1 class="balansi" id="id">150 780 060</h1>
-                <h3 class="chemi-balansi">შენი ბალანსი</h3>
+                <h1 class="font-[700] text-[20px] leading-[24px] " id="id">150 780 060</h1>
+                <h3 class="font-[500] text-[14px] leading-[24px] text-[#727A82]">შენი ბალანსი</h3>
             </div>
-            <div class="ged-icon-div">
-                <img class="ged-icon" src="images/Vector.png" alt="">
+            <div class="flex flex-row justify-center items-center p-[12px] gap-[10px] ml-[232px] w-[48px] h-[48px] mt-[-48px] bg-[#F2F6EC] rounded-[8px]">
+                <img class="" src="images/Vector.png" alt="">
             </div>
-            </div>
-
-            <div class="rectangle2"></div>
-
-            <div class="gedtogel-div">
-                <div><p class="gedtogel">1 GeD = 32ლ</p></div>
-                <div><img class="coolicon2" src="images/coolicon2.png" alt=""></div>
             </div>
 
-            <div class="copy-and-share-div">
-                <p  class="copy-text-label">გადააკოპირე და გაუზიარე სხვას</p>
+            <div class="w-[262px] h-[1px] bg-[#E0E2E7]"></div>
+
+            <div class="flex">
+                <div><p class="font-[600] text-[14px] leading-[16px] text-[#292D33]">1 GeD = 32ლ</p></div>
+                <div><img class="absolute ml-[7.91px]" src="images/coolicon2.png" alt=""></div>
+            </div>
+
+            <div>
+                <p  class="font-[500] text-[12px] leading-[16px] text-[#727A82]">გადააკოპირე და გაუზიარე სხვას</p>
                 <div class="copy-and-share">
-                    <div class="copy">
-                        <input  class="copy-text" type="text" value="https://userId.com/s..." id="copyedtext">
-                        <button class="button"><img src="images/copyicon.png" alt=""></button>
-                        <div class="qr-code"><img src="images/QR-code.png" alt=""></div>
+                    <div class="flex flex-row justify-between items-center pl-[10px] pt-[10px] pb-[10px] pr-[12px] gap-[8px] w-[210px] h-[44px bg-[#FFFFFF] border-solid border-[1px] border-[#E0E2E7] box-border rounded-[6px]">
+                        <input  class="w-[149px] h-[16px] font-[500] text-[14px] leading-[16px] border-none outline-none text-[#727A82]" type="text" value="https://userId.com/s..." id="copyedtext">
+                        <img src="images/copyicon.png" alt="">
+                        <img src="images/QR-code.png" alt="">
                     </div>
                 </div>
             </div>
