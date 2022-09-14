@@ -112,6 +112,16 @@ header{
     height: 44px;
     
 }
+.input::placeholder{
+    font-style: normal;
+    ont-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    
+    
+    color: #727A82;
+}
 .rectangle{
     width: 540px;
     height: 1px;
