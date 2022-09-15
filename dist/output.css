@@ -833,6 +833,10 @@ video {
   overflow: clip;
 }
 
+.overflow-x-clip {
+  overflow-x: clip;
+}
+
 .rounded-\[32px\] {
   border-radius: 32px;
 }
