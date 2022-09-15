@@ -1179,3 +1179,13 @@ video {
 .placeholder\:leading-\[16px\]::placeholder {
   line-height: 16px;
 }
+
+.placeholder\:text-\[\#727A82\]::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(114 122 130 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-\[\#727A82\]::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(114 122 130 / var(--tw-text-opacity));
+}
