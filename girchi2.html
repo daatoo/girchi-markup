@@ -48,34 +48,40 @@
             <div >
                 <label class="font-[500] mt-[-48px] text-[12px] leading-[16px] text-[#292D33]" for="name">გადასარიცხი ჯედების რაოდენობა</label>
                 <label class="font-[500] text-[12px] leading-[16px] text-[#292D33] ml-[202px] " for="name">საკომისიო 1%</label>
-                <input class="flex justify-between items-center p-[10px] gap-[8px] bg-[#FFFFFF] border-solid border-[1px] border-[#E0E2E7] rounded-[6px] w-[490px] h-[44px] box-border flex-row placeholder:font-[500] placeholder:text-[14px] placeholder:leading-[16px] placeholder:text-[#727A82] " id="name" type="text" placeholder="შეიყვანე რაოდენობა. მაგ: 10 000 000">
+                <input class="flex justify-between items-center p-[10px] gap-[8px] bg-[#FFFFFF] border-solid border-[1px] border-[#E0E2E7] rounded-[6px] w-[490px] h-[44px] box-border flex-row placeholder:font-[500] placeholder:text-[14px] placeholder:leading-[16px] placeholder:text-[#727A82] " type="text" placeholder="შეიყვანე რაოდენობა. მაგ: 10 000 000">
                 <label class="font-[500] text-[12px] leading-[16px] text-[#727A82] " for="name">სულ ჩამოგეჭრება 10 000 005GeD</label>
             </div>
 
+        
             <div>
                 <h3 class="font-[500] text-[14px] leading-[16px] text-[#727A82] ">გადარიცხვის მიზანი</h3>
                 <div class="flex flex-row p-[4px] gap-[2px] w-[490px] h-[40px] bg-[#292d330a] rounded-[8px] mt-[12px] ">
-                    <div class="flex flex-row justify-center items-center p-[4px] gap-[10px] w-[159.33px] h-[32px] bg-[#FFFFFF] rounded-[4px] "><p class="font-[500] text-[14px] leading-[24px] text-[#1A8917] cursor-pointer ">გაყიდვა</p></div>
-                    <div class="flex flex-row justify-center items-center p-[4px] gap-[10px] w-[159.33px] h-[32px] bg-[#FFFFFF] rounded-[4px] "><p class="font-[500] text-[14px] leading-[24px] text-[#727A82] cursor-pointer ">ნივთის ყიდვა</p></div>
-                    <div class="flex flex-row justify-center items-center p-[4px] gap-[10px] w-[159.33px] h-[32px] bg-[#FFFFFF] rounded-[4px] "><p class="font-[500] text-[14px] leading-[24px] text-[#727A82] cursor-pointer ">გაჩუქება</p></div>
+                    <div id="sell" class="flex flex-row justify-center items-center p-[4px] gap-[10px] w-[159.33px] h-[32px] bg-[#FFFFFF] rounded-[4px] "><p id="buy-div-text" class="font-[500] text-[14px] leading-[24px] text-[#1A8917] cursor-pointer ">გაყიდვა</p></div>
+                    <div id="buy" class="flex flex-row justify-center items-center p-[4px] gap-[10px] w-[159.33px] h-[32px] bg-[#FFFFFF] rounded-[4px] "><p id="sell-div-text" class="font-[500] text-[14px] leading-[24px] text-[#727A82] cursor-pointer ">ნივთის ყიდვა</p></div>
+                    <div id="donate" class="flex flex-row justify-center items-center p-[4px] gap-[10px] w-[159.33px] h-[32px] bg-[#FFFFFF] rounded-[4px] "><p id="donate-div-text" class="font-[500] text-[14px] leading-[24px] text-[#727A82] cursor-pointer ">გაჩუქება</p></div>
                 </div>
-                <input class="flex justify-between items-center p-[10px] gap-[8px] bg-[#FFFFFF] border-solid border-[1px] border-[#E0E2E7] rounded-[6px] w-[490px] h-[44px] box-border flex-row mt-[20px] placeholder:font-[500] placeholder:text-[14px] placeholder:leading-[16px] placeholder:text-[#727A82] " id="name" type="text" placeholder="რამდენ ლარად გაყიდე? მაგ: 10 000 ₾">
+                <input class=" flex justify-between items-center p-[10px] gap-[8px] bg-[#FFFFFF] border-solid border-[1px] border-[#E0E2E7] rounded-[6px] w-[490px] h-[44px] box-border flex-row mt-[20px] placeholder:font-[500] placeholder:text-[14px] placeholder:leading-[16px] placeholder:text-[#727A82] " id="price" type="text" placeholder="რამდენ ლარად გაყიდე? მაგ: 10 000 ₾">
+                <input class=" hidden" id="item-name" type="text" placeholder="ნივთის სახელი">
 
             </div>
 
-            <div class="flex items-center mt-[20px] cursor-pointer ">
+            <div id="gadaricxvis-danishnuleba" class="flex items-center mt-[20px] cursor-pointer ">
                 <img class="w-[9.33px] h-[9.33px]" src="images/plus-icon.png" alt="">
                 <h3 class=" font-[500] text-[14px] ml-[7.33px] leading-[16px] text-[#727A82] ">გადარიცხვის დანიშნულება</h3>
                 
             </div>
-            <textarea class=" w-[490px] h-[72px] flex  flex-col justify-between items-center pl-[12px] pt-[6px] pb-[6px] pr-[12px] gap-[8px] border-solid border-[1px] border-[#000000] rounded-[6px] " name="" id="" maxlength="300" ></textarea>
+            <textarea id="textarea" class="hidden " name="" id="" maxlength="300" ></textarea>
 
 
             <div class="w-[490px] h-[1px] bg-[#E0E2E7] mt-[23.5px]"></div>
 
             <div class="flex items-center w-[490px] h-[40px]">
-                <div class="cursor-pointer flex flex-col justify-center items-center p-[5px] gap-[10px] absolute w-[18px] h-[18px] bg-[#1A8917] rounded-[3px]  ">
+                <!-- <div class="cursor-pointer flex flex-col justify-center items-center p-[5px] gap-[10px] absolute w-[18px] h-[18px] bg-[#1A8917] rounded-[3px]  ">
                     <img src="images/icon.png" alt="">
+                </div> -->
+                <div>
+                    <input id="checkbox" class="opacity-10 cursor-pointer absolute z-2 checked:bg-black" type="checkbox" name="" id="">
+                    <label for="checkbox" class="flex  flex-col justify-center items-center before:p-[5px] before:gap-[10px] before:absolute before:w-[18px] before:h-[18px]  before:rounded-[3px] ">sas</label>
                 </div>
                 <p class="absolute ml-[30px] font-[500] text-[14px] leading-[16px] text-[#727A82]">გეთანხმები გირჩის კონსტიტუციას</p>
                 <div class=" cursor-pointer flex flex-row justify-center items-center pt-[8px] pb-[8px] pl-[16px] pr-[16px] gap-[4px] w-[111px] h-[40px] bg-[#727a8229] rounded-[32px] ml-[379px]">
@@ -127,7 +133,8 @@
         </div>
     </section>
 
- 
+    <script src="girchi.js"></script>  
+
 </body>
 
 

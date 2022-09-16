@@ -256,7 +256,7 @@
     border: 1px solid #E0E2E7;
     border-radius: 6px;
 } */
-.copy-text{
+/* .copy-text{
     width: 149px;
     height: 16px;
 
@@ -267,7 +267,6 @@
     line-height: 16px;
     border: none;
     outline: none;
-    /* identical to box height, or 114% */
     
     
     color: #727A82;
@@ -285,8 +284,6 @@
 .button:before{
     content: "გადაკოპირდა";
     position: absolute;
-    /* top: -50px; */
-    /* right: 0; */
     margin-top: -50px;
     margin-left: -40px;
     flex-direction: column;
@@ -316,9 +313,12 @@
     background: #F3F3F4;
     border-radius: 6px;
     
-}
+} */
 
 
  /* #div:hover #span{
     visibility: visible;
 }  */
+#name.open{
+    display: none;
+}

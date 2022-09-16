@@ -559,14 +559,6 @@ video {
   position: absolute;
 }
 
-.left-\[\] {
-  left: ;
-}
-
-.left-\[12\.5\%\] {
-  left: 12.5%;
-}
-
 .ml-\[288px\] {
   margin-left: 288px;
 }
@@ -577,6 +569,10 @@ video {
 
 .ml-\[481px\] {
   margin-left: 481px;
+}
+
+.ml-\[12px\] {
+  margin-left: 12px;
 }
 
 .ml-\[-888px\] {
@@ -659,10 +655,6 @@ video {
   margin-left: 9px;
 }
 
-.ml-\[12px\] {
-  margin-left: 12px;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -673,6 +665,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-\[72px\] {
@@ -865,14 +861,6 @@ video {
   gap: 2px;
 }
 
-.gap-\[5px\] {
-  gap: 5px;
-}
-
-.gap-\[px\] {
-  gap: px;
-}
-
 .overflow-clip {
   overflow: clip;
 }
@@ -885,8 +873,8 @@ video {
   border-radius: 32px;
 }
 
-.rounded-\[56px\] {
-  border-radius: 56px;
+.rounded-\[50\%\] {
+  border-radius: 50%;
 }
 
 .rounded-\[8px\] {
@@ -903,14 +891,6 @@ video {
 
 .rounded-\[3px\] {
   border-radius: 3px;
-}
-
-.rounded-\[\] {
-  border-radius: ;
-}
-
-.rounded-\[50\%\] {
-  border-radius: 50%;
 }
 
 .border-\[1px\] {
@@ -977,8 +957,13 @@ video {
   background-color: #292d330a;
 }
 
-.p-\[8px\] {
-  padding: 8px;
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.p-\[10\.5px\] {
+  padding: 10.5px;
 }
 
 .p-\[28px\] {
@@ -1003,22 +988,6 @@ video {
 
 .p-\[5px\] {
   padding: 5px;
-}
-
-.p-\[18px\] {
-  padding: 18px;
-}
-
-.p-\[3px\] {
-  padding: 3px;
-}
-
-.p-\[11px\] {
-  padding: 11px;
-}
-
-.p-\[10\.5px\] {
-  padding: 10.5px;
 }
 
 .pr-\[24px\] {
@@ -1155,6 +1124,10 @@ video {
   color: rgb(26 137 23 / var(--tw-text-opacity));
 }
 
+.opacity-10 {
+  opacity: 0.1;
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1192,6 +1165,41 @@ video {
 .placeholder\:text-\[\#727A82\]::placeholder {
   --tw-text-opacity: 1;
   color: rgb(114 122 130 / var(--tw-text-opacity));
+}
+
+.before\:absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:h-\[18px\]::before {
+  content: var(--tw-content);
+  height: 18px;
+}
+
+.before\:w-\[18px\]::before {
+  content: var(--tw-content);
+  width: 18px;
+}
+
+.before\:gap-\[10px\]::before {
+  content: var(--tw-content);
+  gap: 10px;
+}
+
+.before\:rounded-\[3px\]::before {
+  content: var(--tw-content);
+  border-radius: 3px;
+}
+
+.before\:p-\[5px\]::before {
+  content: var(--tw-content);
+  padding: 5px;
+}
+
+.checked\:bg-black:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:visible {
