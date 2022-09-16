@@ -5,49 +5,32 @@
 //     document.execCommand("copy");
 //     copytext.classList.add("active");
 //     window.getSelection().removeAllRanges();
-    
-// })
-    // let cond = document.getElementById('name');
-    // function isEmpty(cond){
-    //     return (cond === undefined || cond == null || cond.length <= 0) ? true : false;
-    // };
-    // console.log(cond)
-
-    // console.log("hello");
-    // document.body.style.backgroundColor= "red";
 
 
 
 
-var div  = document.getElementById("divv");
+
+var div  = document.getElementById("copytext-div");
 var copytext_icon  = document.getElementById("copytext-icon");
-
-var span  = document.getElementById("copyedtext");
-div.onclick = function() {
-    document.execCommand("copy");
-  }
-  
-  div.addEventListener("copy", function(event) {
-    event.preventDefault();
-    if (event.clipboardData) {
-      event.clipboardData.setData("text/plain", span.textContent);
-      console.log(event.clipboardData.getData("text"))
-    }
-  });
+var divv = document.getElementsByClassName("abcd");
+var text  = document.getElementById("copyedtext");
+var gadakopireba = document.getElementById("dagakopireba");
 
 
+function copylink() {
+    const text = document.getElementById('copyedtext').innerText;
 
-  copytext_icon.onclick = function() {
-    document.execCommand("copy");
-  }
-  
-  copytext_icon.addEventListener("copy", function(event) {
-    event.preventDefault();
-    if (event.clipboardData) {
-      event.clipboardData.setData("text/plain", span.textContent);
-      console.log(event.clipboardData.getData("text"))
-    }
-  });
+    const btnText = document.getElementById('copytext-div');
+
+    navigator.clipboard.writeText(text);
+
+    gadakopireba.innerHTML = "გადაკოპირდა";
+}
+gadakopireba.innerHTML = "გადაკოპირდა";
+
+
+
+
 
 
 var gadaricxva_div = document.getElementById("gadaricxvis-danishnuleba");
