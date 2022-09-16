@@ -322,3 +322,15 @@
 #name.open{
     display: none;
 }
+#num-of-geds{
+    background: url(images/Vector.png) no-repeat right;
+    background-position: 463.5px;
+}
+#price{
+    background: url(images/gel-icon.png) no-repeat right;
+    background-position: 463.5px;
+}
+#item-name{
+    background: url(images/buy-icon.png) no-repeat right;
+    background-position: 463.5px;
+}
