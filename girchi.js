@@ -20,13 +20,9 @@ var gadakopireba = document.getElementById("dagakopireba");
 function copylink() {
     const text = document.getElementById('copyedtext').innerText;
 
-    const btnText = document.getElementById('copytext-div');
-
     navigator.clipboard.writeText(text);
 
-    gadakopireba.innerHTML = "გადაკოპირდა";
-}
-gadakopireba.innerHTML = "გადაკოპირდა";
+};
 
 
 
