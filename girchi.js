@@ -17,6 +17,39 @@
     // document.body.style.backgroundColor= "red";
 
 
+
+
+var div  = document.getElementById("divv");
+var copytext_icon  = document.getElementById("copytext-icon");
+
+var span  = document.getElementById("copyedtext");
+div.onclick = function() {
+    document.execCommand("copy");
+  }
+  
+  div.addEventListener("copy", function(event) {
+    event.preventDefault();
+    if (event.clipboardData) {
+      event.clipboardData.setData("text/plain", span.textContent);
+      console.log(event.clipboardData.getData("text"))
+    }
+  });
+
+
+
+  copytext_icon.onclick = function() {
+    document.execCommand("copy");
+  }
+  
+  copytext_icon.addEventListener("copy", function(event) {
+    event.preventDefault();
+    if (event.clipboardData) {
+      event.clipboardData.setData("text/plain", span.textContent);
+      console.log(event.clipboardData.getData("text"))
+    }
+  });
+
+
 var gadaricxva_div = document.getElementById("gadaricxvis-danishnuleba");
 var textarea = document.getElementById("textarea");
 gadaricxva_div.onclick = function(){

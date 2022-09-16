@@ -559,6 +559,10 @@ video {
   position: absolute;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .ml-\[288px\] {
   margin-left: 288px;
 }
