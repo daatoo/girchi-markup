@@ -1,26 +1,18 @@
-// let copytext = document.querySelector(".copy");
-// copytext.querySelector("button").addEventListener("click", function(){
-//     let input = copytext.querySelector("input.text");
-//     input.ariaSelected();
-//     document.execCommand("copy");
-//     copytext.classList.add("active");
-//     window.getSelection().removeAllRanges();
-
-
-
-
-
+// copy link by click
 var div  = document.getElementById("copytext-div");
-var copytext_icon  = document.getElementById("copytext-icon");
-var divv = document.getElementsByClassName("abcd");
-var text  = document.getElementById("copyedtext");
-var gadakopireba = document.getElementById("dagakopireba");
-
-
+var copytext = document.getElementById("copytext");
+var checkmark_icon = document.getElementById("checkmark-icon");
+var copytext_icon = document.getElementById("copytext-icon");
 function copylink() {
     const text = document.getElementById('copyedtext').innerText;
 
     navigator.clipboard.writeText(text);
+    copytext.innerText = "გადაკოპირდა";
+    setTimeout(() => {
+        copytext.innerText = "გადაკოპირება";
+    },1500);
+    checkmark_icon.style.display = "flex";
+    copytext_icon.style.display = "none";
 
 };
 
@@ -29,6 +21,7 @@ function copylink() {
 
 
 
+//show textarea by clicking transfer purpose div
 var gadaricxva_div = document.getElementById("gadaricxvis-danishnuleba");
 var textarea = document.getElementById("textarea");
 gadaricxva_div.onclick = function(){
@@ -44,7 +37,7 @@ gadaricxva_div.onclick = function(){
 
 
 
-
+//choose transfer aim (buy, sell or donate)
 var sell = document.getElementById("sell");
 var price = document.getElementById("price");
 var itemname = document.getElementById("item-name");
