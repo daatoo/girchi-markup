@@ -21,6 +21,7 @@ function copylink() {
 
 
 
+
 //show textarea by clicking transfer purpose div
 var gadaricxva_div = document.getElementById("gadaricxvis-danishnuleba");
 var textarea = document.getElementById("textarea");

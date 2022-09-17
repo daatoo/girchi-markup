@@ -921,12 +921,20 @@ video {
   gap: 2px;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-clip {
   overflow: clip;
 }
 
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
 }
 
 .rounded-\[32px\] {
@@ -1152,6 +1160,16 @@ video {
 .text-\[\#1A8917\] {
   --tw-text-opacity: 1;
   color: rgb(26 137 23 / var(--tw-text-opacity));
+}
+
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.text-\[\#4D73FA\] {
+  --tw-text-opacity: 1;
+  color: rgb(77 115 250 / var(--tw-text-opacity));
 }
 
 .opacity-10 {
