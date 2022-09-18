@@ -334,3 +334,16 @@
     background: url(images/buy-icon.png) no-repeat right;
     background-position: 463.5px;
 }
+#checkbox:after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 1000;
+    font-size: 20px;
+    font-size: 11px;
+    margin-top: 1px;
+    color: white;
+    display: none;
+}
+#checkbox:checked:after{
+    display: block;
+}
