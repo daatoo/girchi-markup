@@ -110,16 +110,16 @@
 
             <div class="w-full h-[1px] bg-bgGray mt-6"></div>
 
-            <div class="flex items-center w-full h-10">
+            <div class="flex items-center w-full h-10 justify-between">
 
-                <div>
-                    <input id="checkbox" onclick="onclickevent(this);" class="flex items-center justify-center appearance-none w-[18px] h-[18px] absolute border-solid border-2 rounded-[3px border-[#727a8252] checked:bg-secondaryGreen " type="checkbox" name="" id="checkbox"  >
-                    <label for="checkbox" class="absolute ml-[30px] font-[500] text-[14px] leading-[16px] text-[#727A82]">ვეთანხმები <a href="#"><span class="text-[#4D73FA] cursor-pointer ">გირჩის კონსტიტუციას</span></a></label>
+                <div class="flex justify-between gap-[11px]">
+                    <input id="checkbox" onclick="onclickevent(this);" class="flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] checked:bg-secondaryGreen cursor-pointer" type="checkbox" name="" id="checkbox"  >
+                    <label for="checkbox" class=" font-medium text-sm leading-4 text-lightGray">ვეთანხმები <a href="#"><span class="text-[#4D73FA] cursor-pointer ">გირჩის კონსტიტუციას</span></a></label>
                 </div>
 
-                <a href="girchi3.html"><div id="next"  class=" cursor-pointer flex flex-row justify-center items-center pt-[8px] pb-[8px] pl-[16px] pr-[16px] gap-[4px] w-[111px] h-[40px] bg-[#727a8229]  green:bg-[#1A8917] rounded-[32px] ml-[379px]">
-                    <p id="next-p-tag"  class="text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]">შემდეგი</p>
-                    <i id="next-icon" class="fa-solid fa-chevron-right text-[#727A82] text-[10px] font-bold "></i>
+                <a href="girchi3.html"><div id="next"  class=" cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-[#727a8229]  green:bg-secondaryGreen rounded-[32px] ">
+                    <p id="next-p-tag"  class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">შემდეგი</p>
+                    <i id="next-icon" class="fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "></i>
                 </div></a>
 
             </div>
@@ -135,7 +135,7 @@
             <!--
                 here starts div for "your balance"
             -->
-            <div class="flex flex-col p-7 gap-6 w-2/5 max-w-[318px] bg-white rounded-lg">
+            <div class="flex flex-col p-7 gap-6 w-2/5 h-[263px] max-w-[318px] bg-white rounded-lg">
 
                 <div class="banalsi1 flex items-center justify-between">
 
