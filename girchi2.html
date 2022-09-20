@@ -54,9 +54,9 @@
     <section class="mt-8">
 
         <div class="max-w-[1344px] mx-auto px-10  flex justify-center gap-8">
-        <!--
-            here starts div for step 2 
-        -->
+        <!--    
+                here starts div for step 2 
+            -->
         <div class="w-3/5 max-w-[546px] rounded-lg p-6 gap-6 flex flex-col bg-white">
 
             <div class="flex justify-between">
@@ -73,7 +73,7 @@
                 <img class="" src="images/edit-icon.png" alt="">
             </div>
 
-            <div >
+            <div class="flex flex-col gap-1.5">
                 <label class="font-medium flex justify-between  text-[12px] leading-[16px] text-[#292D33]" for="name">გადასარიცხი ჯედების რაოდენობა
                     <span>საკომისიო 1%</span>
                 </label>
@@ -92,7 +92,11 @@
                     <div id="donate" class="flex  justify-center items-center p-1 gap-2.5 w-1/3 h-8 bg-white rounded-[4px] "><p id="donate-div-text" class="font-medium text-sm leading-6 text-lightGray cursor-pointer ">გაჩუქება</p></div>
                 </div>
 
-                <input class=" flex justify-between items-center p-2.5 gap-2 bg-white border-solid border-[1px] border-bgGray rounded-md w-full h-11 box-border   placeholder:font-medium placeholder:text-sm placeholder:leading-4px placeholder:text-lightGray "  id="price" type="text" placeholder="რამდენ ლარად გაყიდე? მაგ: 10 000 ₾">
+                <div class="relative">
+                    <img class="absolute right-[14.21px] top-1/2 translate-y-[-50%]" src="images/ged-icon.png" alt="">
+
+                    <input class=" flex justify-between items-center p-2.5 gap-2 bg-white border-solid border-[1px] border-bgGray rounded-md w-full h-11 box-border   placeholder:font-medium placeholder:text-sm placeholder:leading-4px placeholder:text-lightGray "  id="price" type="text" placeholder="რამდენ ლარად გაყიდე? მაგ: 10 000 ₾">
+                </div>
                 <input class=" hidden" id="item-name" type="text" placeholder="ნივთის სახელი">
 
             </div>
@@ -113,7 +117,11 @@
             <div class="flex items-center w-full h-10 justify-between">
 
                 <div class="flex justify-between gap-[11px]">
-                    <input id="checkbox" onclick="onclickevent(this);" class="flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] checked:bg-secondaryGreen cursor-pointer" type="checkbox" name="" id="checkbox"  >
+                    <div class="relative z-3">
+                        <i id="check" class="hidden z-1"></i>                    
+
+                        <input id="checkbox" onclick="onclickevent(this);" class="z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] checked:bg-secondaryGreen cursor-pointer" type="checkbox" name="" id="checkbox"  >
+                    </div>
                     <label for="checkbox" class=" font-medium text-sm leading-4 text-lightGray">ვეთანხმები <a href="#"><span class="text-[#4D73FA] cursor-pointer ">გირჩის კონსტიტუციას</span></a></label>
                 </div>
 

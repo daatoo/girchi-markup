@@ -78,18 +78,20 @@ var checkbox = document.getElementById("checkbox");
 var next = document.getElementById("next");
 var next_p_tag = document.getElementById("next-p-tag");
 var next_icon = document.getElementById("next-icon");
+var check = document.getElementById("check");
 
 function onclickevent(checkbox) {
     if(checkbox.checked){
         next.style.backgroundColor = "#1A8917";
         next_p_tag.style.color = "white";
         next_icon.style.color = "white";
-
+        check.className = "fa-solid fa-check absolute text-[10px] text-white  left-1/2 translate-x-[-50%] top-1/2 translate-y-[-50%] ";
     }
     else{
         next.style.backgroundColor = "#727a8229";
         next_p_tag.style.color = "#727A82";
         next_icon.style.color = "#727A82";
+        check.className = "hidden z-1";
 
     }
 }
