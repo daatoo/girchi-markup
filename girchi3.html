@@ -129,30 +129,29 @@
                     </div>
                     <img src="images/coolicon2.png" alt="">
                 </div>
-                <div>
+                <div class="flex flex-col gap-1.5">
                     <p class="font-medium text-xs leading-4 text-lightGray">გადააკოპირე და გაუზიარე სხვას</p>
                     <div class="flex items-center gap-2">
-                        <div onclick="copylink()" id="copytext-div"
-                            class="group cursor-pointer flex justify-between items-center p-[10px] pr-3 gap-2 w-full h-11 bg-white border border-bgGray rounded-md">
-                            <p class="cursor-pointer overflow-hidden text-ellipsis h-4 font-medium text-sm leading-4 border-none outline-none text-lightGray z-10"
+                        <div onclick="copylink()" id="copytext-div" class="group cursor-pointer flex justify-between items-center px-3 py-3.5  w-[80.1%] h-11 bg-white border border-bgGray rounded-md">
+                            <p class="cursor-pointer overflow-hidden text-ellipsis h-4 font-medium text-sm leading-4 border-none outline-none text-lightGray"
                                 id="copyedtext">https://userId.com/s...</p>
-                            <img id="checkmark-icon" class="hidden w-[14px] h-[14px] cursor-pointer translate-x-[-4px]"
-                                src="images/check-mark.png" alt="">
-                            <div class='relative'>
-                                <img id="copytext-icon" class="w-[20px] h-[20px] cursor-pointer ml-[9px]"
-                                    src="images/copyicon.png" alt="">
+                            <div   class="">
                                 <span
-                                    class="invisible group-hover:visible   absolute text-white -top-10 -left-5 rounded-[4px] bg-[#292d33e6] px-2 py-1 ">
+                                id="span" class="invisible group-hover:visible  absolute text-white  rounded-[4px] bg-[#292d33e6] px-2 py-1 translate-x-[-50%] ml-2.5 translate-y-[-36px]">
                                     <p id="copytext" class="font-medium text-xs leading-[20px] text-whitebg-white ">
-                                        გადაკოპირება
+                                       გადაკოპირება
                                     </p>
                                     <span
-                                        class=" absolute w-[8px] h-[8px] rotate-45 mb-[-25.3px] bg-[#292d33e6]"></span>
+                                    class=" absolute  w-[8px] h-[8px] rotate-45 ml-[50%]  translate-x-[-14px] bg-[#292d33e6]"></span>
                                 </span>
+                                <img id="copytext-icon" class="w-5 h-5 cursor-pointer "
+                                src="images/copyicon.png" alt="">
+                                <img id="checkmark-icon" class="w-[14px] h-[14px] mr-[3px] cursor-pointer hidden"
+                                src="images/check-mark.png" alt="">
                             </div>
                         </div>
                         <div class="flex items-center justify-center w-11 aspect-square bg-[#F3F3F4] rounded-md">
-                            <img src="./images/QR-code.png" rounded-md">
+                            <img src="./images/QR-code.png" >
                         </div>
                     </div>
                 </div>

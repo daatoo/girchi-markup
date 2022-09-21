@@ -3,6 +3,7 @@ var div  = document.getElementById("copytext-div");
 var copytext = document.getElementById("copytext");
 var checkmark_icon = document.getElementById("checkmark-icon");
 var copytext_icon = document.getElementById("copytext-icon");
+var span = document.getElementById("span");
 function copylink() {
     const text = document.getElementById('copyedtext').innerText;
 
@@ -12,6 +13,7 @@ function copylink() {
         copytext.innerText = "გადაკოპირება";
     },1500);
     checkmark_icon.style.display = "flex";
+    span.className = "invisible group-hover:visible  absolute text-white  rounded-[4px] bg-[#292d33e6] px-2 py-1 translate-x-[-50%] ml-[7px] translate-y-[-39px]"
     copytext_icon.style.display = "none";
 
 };
