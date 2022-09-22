@@ -97,3 +97,22 @@ function onclickevent(checkbox) {
 
     }
 }
+
+var page_1 = document.getElementById("page-1");
+var page_2 = document.getElementById("page-2");
+var page_3 = document.getElementById("page-3");
+function page_1_click(){
+    page_1.style.display = "none";
+    page_2.style.display = "flex";
+    page_3.style.display = "none";
+}
+function page_2_click(){
+    page_1.style.display = "none";
+    page_2.style.display = "none";
+    page_3.style.display = "flex";
+}
+function page_3_click(){
+    page_1.style.display = "flex";
+    page_2.style.display = "none";
+    page_3.style.display = "none";
+}
