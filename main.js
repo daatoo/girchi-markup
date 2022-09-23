@@ -16,7 +16,7 @@ const searchStates = async searchText => {
       }
       searchTextt().then(states => {
         states; // fetched movies
-    
+        console.log(states);
         let matches = states.filter(state =>{
             const regex = new RegExp(`^${searchText}`, 'gi');
             if(searchText != state.name.match(regex)){
