@@ -32,7 +32,7 @@ const searchStates = async searchText => {
 const outputhtml = matches => {
 if(matches.length > 0){
         const html = matches.map(match => `
-        <div class="flex flex-row items-center px-[12px] py-[8px] gap-3 w-[466px] min-h-[68px] bg-slate-400  rounded-[4px] ">
+        <div class="flex flex-row items-center px-[12px] py-[8px] gap-3 w-[466px] min-h-[68px] bg-slate-400  rounded-[4px] cursor-pointer ">
             <h4 class="">${match.name} (${match.abbr}) </h4>
         </div>
         `).join('');

@@ -1540,3 +1540,15 @@ video {
 .group:hover .group-hover\:visible {
   visibility: visible;
 }
+
+#match-list::-webkit-scrollbar {
+  width: 6px;
+}
+#match-list::-webkit-scrollbar-thumb {
+  background-color: #727A82;
+  border-radius: 3px;
+}
+#search:focus +   #matchList-div{
+  display: flex;
+  
+}

@@ -776,16 +776,24 @@ video {
   width: 490px;
 }
 
-.w-\[466px\] {
-  width: 466px;
-}
-
 .w-\[\] {
   width: ;
 }
 
+.w-\[466px\] {
+  width: 466px;
+}
+
 .w-\[478px\] {
   width: 478px;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
+.w-\[498px\] {
+  width: 498px;
 }
 
 .max-w-\[1344px\] {
@@ -1361,6 +1369,23 @@ video {
 .checked\:bg-secondaryGreen:checked {
   --tw-bg-opacity: 1;
   background-color: rgb(26 137 23 / var(--tw-bg-opacity));
+}
+
+.hover\:visible:hover {
+  visibility: visible;
+}
+
+.focus\:visible:focus {
+  visibility: visible;
+}
+
+.focus\:block:focus {
+  display: block;
+}
+
+.focus\:bg-red-500:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:visible {
