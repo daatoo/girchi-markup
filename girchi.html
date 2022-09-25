@@ -18,7 +18,7 @@
     <!--
         header
     -->
-    <header class="w-full p-4 bg-white">
+    <header  class="w-full p-4 bg-white">
         <div class='max-w-[1344px] mx-auto flex items-center justify-between'>
             <div class='flex items-center gap-4'>
                 <img src="images/sitelogo.png" alt="logo">
@@ -69,16 +69,33 @@
                         ნაბიჯი 1/3</h2>
                 </div>
 
-                <div>
-                    <label class="font-medium text-xs leading-4 text-mainBlack" for="name">მიმღები</label>
-                    <input
-                        class="flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid border border-bgGray rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
-                        id="search" type="search" placeholder="სახელი-გვარი / პირადი ნომერი / მომხმარებლის ID">
-                        <div id="matchList-div" class="hidden">
-                            <div class=" absolute overflow-scroll overflow-x-hidden hidden flex-col items-center p-1.5 gap-1.5 w-[498px]  h-[284px] bg-white border-solid border-[1px] border-[#F2F2F2] rounded-md " id="match-list">
-
+                <div class="flex flex-col gap-5">
+                        <div>
+                                <div class="flex flex-col gap-1.5">
+                                    <label class="font-medium text-xs leading-4  text-mainBlack" for="name">მიმღები</label>
+                                    <input
+                                    class="search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid border border-bgGray rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
+                                    id="search"  type="search" placeholder="სახელი-გვარი / პირადი ნომერი / მომხმარებლის ID">
+                                </div>
+                                <div id="matchList-div" class="hidden relative">
+                                    <div class=" absolute overflow-scroll overflow-x-hidden hidden flex-col items-center p-1.5  w-full  max-h-[284px] bg-white border-solid border-[1px] border-[#F2F2F2] rounded-md " id="match-list">
+        
+                                    </div>
+                                </div>
+                        </div>
+                        <div id="choosen-div"   class=" flex-row items-center px-[12px] py-[8px] gap-3 w-full min-h-[68px]  rounded-[4px] cursor-pointer hidden "   >
+                            <img class="w-10 h-10"
+                             src="images/profile-picture.png">
+                            <div class="flex flex-col">
+                                <h4 id="chose" class="font-[400] text-[14px] leading-6 text-[#292D33] "></h4>
+                                <div class="flex  h-5  justify-center items-center">
+                                    <p class="font-[500] text-[12px] leading-6 text-[#727A82] ">პ.ნ 4000535645</p>
+                                    <p class="text-[#727A82]">.</p>
+                                    <p  class="font-[500] text-[12px] leading-5 text-[#727A82] ">ID: 433281</p>
+                                </div>
                             </div>
                         </div>
+
                 </div>
                 <div class="w-full h-[1px] bg-bgGray mt-6"></div>
                     <div onclick="page_1_click();" 
@@ -87,6 +104,7 @@
                         <i id="next-icon" class="fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "></i>
                     </div>
             </div>
+
             <!--
                 here ends div for step 1
             -->

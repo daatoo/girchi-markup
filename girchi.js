@@ -23,7 +23,6 @@ function copylink() {
 
 
 
-
 //show textarea by clicking transfer purpose div
 var gadaricxva_div = document.getElementById("gadaricxvis-danishnuleba");
 var textarea = document.getElementById("textarea");
@@ -116,6 +115,14 @@ function page_3_click(){
     page_2.style.display = "none";
     page_3.style.display = "none";
 }
+
+
+
+
+
+
+
+
 
 
 

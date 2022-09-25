@@ -1548,7 +1548,7 @@ video {
   background-color: #727A82;
   border-radius: 3px;
 }
-#search:focus +   #matchList-div{
+/* #search:focus +   #matchList-div{
   display: flex;
   
-}
+} */

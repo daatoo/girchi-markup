@@ -34,6 +34,14 @@
 		"lat": "34.736009",
 		"long": "-92.331122"
 	},
+	{"abbr": "bAR",
+	"name": "bArkansas",
+	"capital": "Little Rock",
+	"lat": "34.736009",
+	"long": "-92.331122"
+},
+
+	
 	{
 		"abbr": "CA",
 		"name": "California",
