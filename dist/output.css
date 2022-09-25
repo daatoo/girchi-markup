@@ -1235,6 +1235,10 @@ video {
   font-weight: 600;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .leading-\[14px\] {
   line-height: 14px;
 }

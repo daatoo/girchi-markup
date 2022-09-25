@@ -46,11 +46,11 @@ if(matches.length > 0){
             <img class="w-10 h-10"
              src="images/profile-picture.png">
             <div class="flex flex-col">
-                <h4 id="${match.capital}" class="font-[400] text-[14px] leading-6 text-[#292D33] ">${match.name}  </h4>
+                <h4 id="${match.capital}" class="font-normal text-[14px] leading-6 text-[#292D33] ">${match.name}  </h4>
                 <div class="flex h-5 w-full justify-center items-center">
-                    <p class="font-[500] text-[12px] leading-6 text-[#727A82] ">პ.ნ 4000*******</p>
-                    <p class="text-[#727A82]">.</p>
-                    <p  class="font-[500] text-[12px] leading-5 text-[#727A82] ">ID: 433281</p>
+                    <p class="font-medium text-[12px] leading-6 text-lightGray ">პ.ნ 4000*******</p>
+                    <p class="text-lightGray">.</p>
+                    <p  class="font-medium text-[12px] leading-5 text-lightGray ">ID: 433281</p>
                 </div>
             </div>
         </div>
