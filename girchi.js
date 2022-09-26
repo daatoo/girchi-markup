@@ -131,6 +131,18 @@ if ( e.target.value !== "" && e.target.nextElementSibling && e.target.nextElemen
   e.target.nextElementSibling.focus();
 
 }
+
+
+e.target.onkeydown = function() {
+  const key = event.key;
+  if (key === "Backspace") {
+    if(e.target.value == ""){
+        e.target.previousElementSibling.focus();
+    }
+  }
+};
+console.log(e.target)
+
 var real_input = document.getElementsByClassName("real-input") ;
 if(document.getElementById("digits1").value !== "" && document.getElementById("digits2").value !== "" && document.getElementById("digits3").value !== "" && 
 document.getElementById("digits4").value !== "" && document.getElementById("digits5").value !== "" && document.getElementById("digits6").value !== ""){
@@ -139,3 +151,4 @@ document.getElementById("digits4").value !== "" && document.getElementById("digi
 }
 
 });
+
