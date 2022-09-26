@@ -117,3 +117,25 @@ function page_3_click(){
     page_2.style.display = "none";
     page_3.style.display = "none";
 }
+
+
+
+// Listen on the 'input' event inside the .digits area:
+document.querySelector(".digits").addEventListener("input", function(e){
+// Exclude non-numeric characters from input:
+e.target.value = e.target.value.replace(/[^0-9]/g,'');
+
+// If the input value is filled and there is a neighbouring element that is input, then focus on that element:
+if ( e.target.value !== "" && e.target.nextElementSibling && e.target.nextElementSibling.nodeName === "INPUT" ){
+
+  e.target.nextElementSibling.focus();
+
+}
+var real_input = document.getElementsByClassName("real-input") ;
+if(document.getElementById("digits1").value !== "" && document.getElementById("digits2").value !== "" && document.getElementById("digits3").value !== "" && 
+document.getElementById("digits4").value !== "" && document.getElementById("digits5").value !== "" && document.getElementById("digits6").value !== ""){
+    real_input = document.getElementById("digits1").value + document.getElementById("digits2").value + document.getElementById("digits3").value + document.getElementById("digits4").value
+    + document.getElementById("digits5").value + document.getElementById("digits6").value;
+}
+
+});
