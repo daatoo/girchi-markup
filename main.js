@@ -68,12 +68,6 @@ if(matches.length > 0){
 }
 search.addEventListener('input', () => searchStates(search.value));
 
-// function clicking(){
-//     let menu = document.getElementById("Alaskaa");
-//     let children = menu.parentElement.childNodes[1].textContent;
-//     console.log(children);
-// }
-
 
 const choosen = document.getElementById("choosen");
 
@@ -95,11 +89,6 @@ window.addEventListener('click', function(e){
     }
 });
 
-// function clicking(){
-//     let menu = document.getElementById("Alaskaa");
-//     let children = menu.parentElement.childNodes[1].textContent;
-//     console.log(children);
-// };
 
 function clicking(clicked_id){
     var b= clicked_id;
@@ -111,17 +100,3 @@ function clicking(clicked_id){
 
 }
 
-// async function dd(){
-//     const response = await fetch(new URL('https://api.github.com/users/daatoo/repos'));
-// return response.json();
-// }
-// console.log(dd())
-
-// const url = new URL('https://api.github.com/users/daatoo/repos');
-// const fetch1 = fetch("https://api.github.com/users/daatoo/repos");
-// console.log(url.toString())
-// console.log(fetch1.)
-// var dg =  fetch("https://api.github.com/users/otarza/followers")
-// .then(res => res.json())
-// .then(dataa => dataa);
-// console.log(dg)

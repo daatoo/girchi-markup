@@ -115,19 +115,3 @@ function page_3_click(){
     page_2.style.display = "none";
     page_3.style.display = "none";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
