@@ -1,5 +1,3 @@
-
-
 //suggestions 
 const search = document.getElementById('search');
 const search2 = document.querySelector(".search");
@@ -71,7 +69,7 @@ search.addEventListener('input', () => searchStates(search.value));
 
 const choosen = document.getElementById("choosen");
 
-
+// remove suggestions' div display if clicked outside of search
 window.addEventListener('click', function(e){   
     if (document.getElementById('search').contains(e.target) ){
       // Clicked in box
@@ -89,7 +87,7 @@ window.addEventListener('click', function(e){
     }
 });
 
-
+//  set varialbes for choosen  search suggestions
 function clicking(clicked_id){
     var b= clicked_id;
      let menu = document.getElementById(b);

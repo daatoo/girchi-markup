@@ -97,6 +97,8 @@ function onclickevent(checkbox) {
     }
 }
 
+
+// transition to next step
 var page_1 = document.getElementById("page-1");
 var page_2 = document.getElementById("page-2");
 var page_3 = document.getElementById("page-3");
