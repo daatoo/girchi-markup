@@ -73,10 +73,36 @@ donate.onclick = function(){
 
 }
 
+document.querySelector(".page_2").addEventListener("input", function(e){
+    e.target.value = e.target.value.replace(/[^0-9]/g,'');
+
+
+
+    var numOfGeds_input = document.getElementById("num-of-geds")
+    var price_input = document.getElementById("price-input")
+    var next_button = document.getElementById("next")
+    var next_p_tag = document.getElementById("next-p-tag")
+    var next_icon = document.getElementById("next-iconn")
+    var checkbox = document.getElementById("checkbox")
+    if(numOfGeds_input.value && price_input.value  ){
+        next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-secondaryGreen   rounded-[32px]"
+        next_p_tag.className = "text-white font-medium text-sm leading-6 tracking-[0.02em]"
+        next_icon.className = "fa-solid fa-chevron-right text-white text-[10px] font-bold "
+
+    }
+    if(!numOfGeds_input.value || !price_input.value  ){
+        next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-[#727a8229]   rounded-[32px]"
+        next_p_tag.className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
+        next_icon.className = "fa-solid fa-chevron-right text-white text-[10px] font-bold"
+
+    }
+})
+
+
 
 // var num_of_geds = document.getElementById("num-of-geds")
-// if(num_of_geds.value !== ""){
-//     console.log("yed")
+// if(num_of_geds.value){
+//     console.log("hey")
 // }
 
 
@@ -89,18 +115,10 @@ var check = document.getElementById("check");
 
 function onclickevent(checkbox) {
     if(checkbox.checked){
-        next.style.backgroundColor = "#1A8917";
-        next_p_tag.style.color = "white";
-        next_icon.style.color = "white";
+
         check.className = "fa-solid fa-check absolute text-[10px] text-white  left-1/2 translate-x-[-50%] top-1/2 translate-y-[-50%] ";
     }
-    else{
-        next.style.backgroundColor = "#727a8229";
-        next_p_tag.style.color = "#727A82";
-        next_icon.style.color = "#727A82";
-        check.className = "hidden z-1";
-
-    }
+   
 }
 
 
