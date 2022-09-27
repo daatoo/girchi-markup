@@ -173,14 +173,13 @@ if(document.getElementById("digits1").value !== "" && document.getElementById("d
 document.getElementById("digits4").value !== "" && document.getElementById("digits5").value !== "" && document.getElementById("digits6").value !== ""){
     real_input = document.getElementById("digits1").value + document.getElementById("digits2").value + document.getElementById("digits3").value + document.getElementById("digits4").value
     + document.getElementById("digits5").value + document.getElementById("digits6").value;
-    document.getElementById("pg-3-buttonText").className = "text-white font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
+    // document.getElementById("pg-3-buttonText").className = "text-white font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
     document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-secondaryGreen rounded-[32px] "
-    console.log(real_input)
-
+    document.getElementById("real-input").value = real_input;
 }
 if(document.getElementById("digits1").value == "" || document.getElementById("digits2").value == "" || document.getElementById("digits3").value == "" ||
 document.getElementById("digits4").value == "" || document.getElementById("digits5").value == "" || document.getElementById("digits6").value == ""){
-    document.getElementById("pg-3-buttonText").className = "text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
+    // document.getElementById("pg-3-buttonText").className = "text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
 
     document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-[#727a8229] rounded-[32px] ";
 }
