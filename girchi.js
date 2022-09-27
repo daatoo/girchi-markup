@@ -88,13 +88,13 @@ document.querySelector(".page_2").addEventListener("input", function(e){
 checkbox.addEventListener('change', (event) => {
     console.log("hello")
   });
-    if(numOfGeds_input.value && price_input.value && !checkbox.onchange ){
+    if(numOfGeds_input.value && price_input.value ){
         next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-secondaryGreen   rounded-[32px]"
         next_p_tag.className = "text-white font-medium text-sm leading-6 tracking-[0.02em]"
         next_icon.className = "fa-solid fa-chevron-right text-white text-[10px] font-bold "
 
     }
-    if(!numOfGeds_input.value || !price_input.value || !checkbox.onchange ){
+    if(!numOfGeds_input.value || !price_input.value ){
         next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-[#727a8229]   rounded-[32px]"
         next_p_tag.className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
         next_icon.className = "fa-solid fa-chevron-right text-white text-[10px] font-bold"
