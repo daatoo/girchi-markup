@@ -84,20 +84,23 @@ document.querySelector(".page_2").addEventListener("input", function(e){
     var next_p_tag = document.getElementById("next-p-tag")
     var next_icon = document.getElementById("next-iconn")
     var checkbox = document.getElementById("checkbox")
-    if(numOfGeds_input.value && price_input.value  ){
+
+checkbox.addEventListener('change', (event) => {
+    console.log("hello")
+  });
+    if(numOfGeds_input.value && price_input.value && !checkbox.onchange ){
         next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-secondaryGreen   rounded-[32px]"
         next_p_tag.className = "text-white font-medium text-sm leading-6 tracking-[0.02em]"
         next_icon.className = "fa-solid fa-chevron-right text-white text-[10px] font-bold "
 
     }
-    if(!numOfGeds_input.value || !price_input.value  ){
+    if(!numOfGeds_input.value || !price_input.value || !checkbox.onchange ){
         next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-[#727a8229]   rounded-[32px]"
         next_p_tag.className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
         next_icon.className = "fa-solid fa-chevron-right text-white text-[10px] font-bold"
 
     }
 })
-
 
 
 // var num_of_geds = document.getElementById("num-of-geds")
@@ -152,16 +155,10 @@ e.target.value = e.target.value.replace(/[^0-9]/g,'');
 // If the input value is filled and there is a neighbouring element that is input, then focus on that element:
 if ( e.target.value !== "" && e.target.nextElementSibling && e.target.nextElementSibling.nodeName === "INPUT" ){
 
-  e.target.nextElementSibling.value = NaN;
   e.target.nextElementSibling.focus();
-  e.target.nextElementSibling.value = "";
-
-
-
 
 }
 
- console.log(e.target)
 e.target.onkeydown = function() {
   const key = event.key;
   if (key === "Backspace") {
@@ -169,8 +166,7 @@ e.target.onkeydown = function() {
         e.target.previousElementSibling.focus();
     }
   }
-};
-console.log(e.target)
+}
 
 var real_input = document.getElementsByClassName("real-input") ;
 if(document.getElementById("digits1").value !== "" && document.getElementById("digits2").value !== "" && document.getElementById("digits3").value !== "" && 
@@ -179,6 +175,8 @@ document.getElementById("digits4").value !== "" && document.getElementById("digi
     + document.getElementById("digits5").value + document.getElementById("digits6").value;
     document.getElementById("pg-3-buttonText").className = "text-white font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
     document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-secondaryGreen rounded-[32px] "
+    console.log(real_input)
+
 }
 if(document.getElementById("digits1").value == "" || document.getElementById("digits2").value == "" || document.getElementById("digits3").value == "" ||
 document.getElementById("digits4").value == "" || document.getElementById("digits5").value == "" || document.getElementById("digits6").value == ""){
@@ -187,4 +185,17 @@ document.getElementById("digits4").value == "" || document.getElementById("digit
     document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-[#727a8229] rounded-[32px] ";
 }
 });
+document.querySelector(".digits").addEventListener("keydown", function(e){
+    e.target.onkeydown = function() {
+        const key = event.key;
+        if (key === "Backspace") {
+          if(e.target.value == ""){
+              e.target.previousElementSibling.focus();
+          }
+        }
+      }
+    
+})
+
+
 
