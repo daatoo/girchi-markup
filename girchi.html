@@ -105,9 +105,9 @@
                 </div>
 
                 <div class="w-full h-[1px] bg-bgGray mt-6"></div>
-                <div onclick="page_1_click();" 
+                <div onclick="page_1_click();" id="page-1-button"
                     class="cursor-pointer flex justify-center ml-auto items-center py-2 px-4 gap-1 w-[111px] h-10 bg-[#727a8229] rounded-[32px]">
-                    <p class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">შემდეგი</p>
+                    <p id="next-btText" class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">შემდეგი</p>
                     <i id="next-icon" class="fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "></i>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                     </label>
                     <div class="relative">
                         <img src="images/ged-icon.png" class="absolute right-[14.21px] top-1/2 translate-y-[-50%]" alt="">
-                        <input id="num-of-geds" class="flex w-full  p-2.5 gap-2 bg-white border-solid border-[1px] border-bgGray rounded-md  h-11 
+                        <input id="num-of-geds"  class="flex w-full  p-2.5 gap-2 bg-white border-solid border-[1px] border-bgGray rounded-md  h-11 
                         box-border flex-row placeholder:font-medium placeholder:text-sm placeholder:leading-4 placeholder:text-lightGray " type="text"
                         placeholder="შეიყვანე რაოდენობა. მაგ: 10 000 000">
                     </div>
@@ -270,10 +270,10 @@
                       </script>
                 </div>
 
-                <div class="w-full flex justify-end ">
-                    <div id="page-3" onclick="page_3_click();" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
+                <div  class="w-full flex justify-end ">
+                    <div id="page-3-button" onclick="page_3_click();" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
                     h-[40px] bg-[#727a8229] rounded-[32px] "  href="">
-                        <p class="text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]">დადასტურება</p>
+                        <p id="pg-3-buttonText" class="text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]">დადასტურება</p>
                     </div>
                 </div>
 

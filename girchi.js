@@ -74,6 +74,12 @@ donate.onclick = function(){
 }
 
 
+// var num_of_geds = document.getElementById("num-of-geds")
+// if(num_of_geds.value !== ""){
+//     console.log("yed")
+// }
+
+
 //checkbox clicked event 
 var checkbox = document.getElementById("checkbox");
 var next = document.getElementById("next");
@@ -128,11 +134,16 @@ e.target.value = e.target.value.replace(/[^0-9]/g,'');
 // If the input value is filled and there is a neighbouring element that is input, then focus on that element:
 if ( e.target.value !== "" && e.target.nextElementSibling && e.target.nextElementSibling.nodeName === "INPUT" ){
 
+  e.target.nextElementSibling.value = NaN;
   e.target.nextElementSibling.focus();
+  e.target.nextElementSibling.value = "";
+
+
+
 
 }
 
-
+ console.log(e.target)
 e.target.onkeydown = function() {
   const key = event.key;
   if (key === "Backspace") {
@@ -148,7 +159,14 @@ if(document.getElementById("digits1").value !== "" && document.getElementById("d
 document.getElementById("digits4").value !== "" && document.getElementById("digits5").value !== "" && document.getElementById("digits6").value !== ""){
     real_input = document.getElementById("digits1").value + document.getElementById("digits2").value + document.getElementById("digits3").value + document.getElementById("digits4").value
     + document.getElementById("digits5").value + document.getElementById("digits6").value;
+    document.getElementById("pg-3-buttonText").className = "text-white font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
+    document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-secondaryGreen rounded-[32px] "
 }
+if(document.getElementById("digits1").value == "" || document.getElementById("digits2").value == "" || document.getElementById("digits3").value == "" ||
+document.getElementById("digits4").value == "" || document.getElementById("digits5").value == "" || document.getElementById("digits6").value == ""){
+    document.getElementById("pg-3-buttonText").className = "text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
 
+    document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-[#727a8229] rounded-[32px] ";
+}
 });
 
