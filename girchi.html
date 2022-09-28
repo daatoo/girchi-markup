@@ -171,7 +171,7 @@
                     </div>
                     <div class=" hidden" id="item-name" >
                         <img  class="absolute right-[14.21px] top-1/2 translate-y-[-50%]" src="images/buy-icon.png" alt="">
-                        <input class=" flex justify-between items-center p-2.5 gap-2 bg-white border-solid border-[1px] border-bgGray 
+                        <input id="itemName-input" class=" flex justify-between items-center p-2.5 gap-2 bg-white border-solid border-[1px] border-bgGray 
                         rounded-md w-full h-11 box-border   placeholder:font-medium placeholder:text-sm placeholder:leading-4px placeholder:text-lightGray "   
                         type="text" placeholder="ნივთის სახელი" name="itemName">
                     
@@ -195,7 +195,7 @@
                             <i id="check" class="hidden z-1"></i>                    
                             <input id="checkbox" onclick="onclickevent(this);" 
                             class="z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252]
-                             checked:bg-secondaryGreen cursor-pointer" type="checkbox" name="" id="checkbox"  >
+                              cursor-pointer" type="checkbox" name="checkbox" id="checkbox"  required>
                         </div>
                         <label for="checkbox" class=" font-medium text-sm leading-4 text-lightGray">ვეთანხმები <a href="#">
                             <span class="text-[#4D73FA] cursor-pointer ">გირჩის კონსტიტუციას</span></a></label>
@@ -204,8 +204,9 @@
                     bg-[#727a8229]   rounded-[32px] ">
                         <p id="next-p-tag"  class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">შემდეგი</p>
                         
-                        <i id="next-iconn" class="fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "></i>
+                        <i id="next-icon2" class="fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "></i>
                     </div>
+                    
                  
                 </div>
              
@@ -248,24 +249,24 @@
                     </p>
                     <div class="digits flex gap-3 w-full justify-center">
                         <input type="text" id="real-input" name="emailCode" class="absolute w-3 invisible">
-                        <input id="digits1" type="text" maxlength="1" name="" 
+                        <input id="fakeInput1" type="text" maxlength="1" name="" 
                         class="flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] 
-                        font-bold text-base text-[#292D33] "/>
-                        <input id="digits2" type="text" maxlength="1" name="" 
+                        font-bold text-base text-[#292D33] " required/>
+                        <input id="fakeInput2" type="text" maxlength="1" name="" 
                         class="flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] 
-                        font-bold text-base text-[#292D33] "/>
-                        <input id="digits3" type="text" maxlength="1" name="" 
+                        font-bold text-base text-[#292D33] " required/>
+                        <input id="fakeInput3" type="text" maxlength="1" name="" 
                         class="flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] 
-                        font-bold text-base text-[#292D33] "/>
-                        <input id="digits4" type="text" maxlength="1" name="" 
+                        font-bold text-base text-[#292D33] " required/>
+                        <input id="fakeInput4" type="text" maxlength="1" name="" 
                         class="flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] 
-                        font-bold text-base text-[#292D33] "/> 
-                        <input id="digits5" type="text" maxlength="1" name="" 
+                        font-bold text-base text-[#292D33] " required/> 
+                        <input id="fakeInput5" type="text" maxlength="1" name="" 
                         class="flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] 
-                        font-bold text-base text-[#292D33] "/>
-                        <input id="digits6" type="text" maxlength="1" name="" 
+                        font-bold text-base text-[#292D33] " required/>
+                        <input id="fakeInput6" type="text" maxlength="1" name="" 
                         class="flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] 
-                        font-bold text-base text-[#292D33] "/>
+                        font-bold text-base text-[#292D33] " required/>
                     </div>
                       <script>
  
@@ -277,8 +278,10 @@
                     h-[40px] bg-[#727a8229] rounded-[32px] "  href="">
                         <p id="pg-3-buttonText" class="text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]">დადასტურება</p>
                     </div> -->
-                    <input id="page-3-button" onclick="page_3_click();" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
-                    h-[40px] bg-[#727a8229] rounded-[32px]  "  type="submit" value="დადასტურება">
+                    <!-- <input id="page-3-button" onclick="page_3_click();" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
+                    h-[40px] bg-[#727a8229] rounded-[32px]  "  type="submit" value="დადასტურება"> -->
+                    <button id="page-3-button" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
+                    h-[40px] bg-[#727a8229] rounded-[32px] ">დადასტურება</button>
                 </div>
 
             </div>

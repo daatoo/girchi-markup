@@ -107,7 +107,7 @@ matchList_div.onclick = function(){
 }
 var remove_button = document.getElementById("remove_button")
 remove_button.onclick = function() {
-    document.getElementById("choosen-div").style.display = "none";
+    document.getElementById("choosen-div").className = "bg-[#292d330a] flex-row items-center justify-between px-[12px] py-[8px] gap-3 w-full min-h-[68px] rounded-[4px] cursor-pointer hidden";
     document.getElementById("page-1-button").className = "cursor-pointer flex justify-center ml-auto items-center py-2 px-4 gap-1 w-[111px] h-10 bg-[#727a8229]  rounded-[32px]";
     document.getElementById("next-btText").className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
     document.getElementById("next-icon").className = "fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "
