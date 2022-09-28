@@ -128,7 +128,7 @@ function onclickevent(checkbox) {
 
 
 var choosen_div = document.getElementById("choosen-div");
-var searchh = document.getElementById('search');
+var Search = document.getElementById('search');
 
 // transition to next step
 var page_1 = document.getElementById("page-1");
@@ -140,8 +140,9 @@ function page_1_click(){
         page_1.style.display = "none";
         page_2.style.display = "flex";
         page_3.style.display = "none";
+        Search.className = "search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid  border-bgGray rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
     }else{
-        searchh.style.border = "1px solid red"
+        Search.className = "search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid border-[1px] border-red-500 rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
     }
 }
 function page_2_click(){
@@ -166,15 +167,17 @@ function page_2_click(){
         page_3.style.display = "flex";
     }
 }
-function page_3_click(){
-    page_1.style.display = "flex";
-    page_2.style.display = "none";
+
+function page_3_goBack(){
+    page_1.style.display = "none";
+    page_2.style.display = "flex";
     page_3.style.display = "none";
-    console.log(fakeInput1.value)
 }
 
 
 
+
+// step 3 email code input
 var fakeInput1 = document.getElementById("fakeInput1")
 var fakeInput2 = document.getElementById("fakeInput2")
 var fakeInput3 = document.getElementById("fakeInput3")
@@ -209,17 +212,36 @@ var real_input = document.getElementsByClassName("real-input") ;
 if(fakeInput1.value !== "" && fakeInput2.value !== "" && fakeInput3.value !== "" && fakeInput4.value !== "" && fakeInput5.value !== "" && fakeInput6.value !== ""){
     real_input = fakeInput1.value + fakeInput2.value + fakeInput3.value + fakeInput4.value + fakeInput5.value + fakeInput6.value;
     // document.getElementById("pg-3-buttonText").className = "text-white font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
-    document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-secondaryGreen rounded-[32px] "
     document.getElementById("real-input").value = real_input;
-    if(real_input != 123456){
-        console.log("yes")
+
+    if(real_input !== 123456){
+        fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
+
+    }     if(real_input == 123456){
+        fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+        fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+
     }
 }
-if(fakeInput1.value == "" || fakeInput2.value == "" || fakeInput3.value == "" || fakeInput4.value == "" || fakeInput5.value == "" || fakeInput6.value == ""){
+if(fakeInput1.value == "" || fakeInput2.value == "" || fakeInput3.value == "" || fakeInput4.value == "" || fakeInput5.value == "" || fakeInput6.value == "" || real_input !== 123456){
     // document.getElementById("pg-3-buttonText").className = "text-[#727A82] font-[500] text-[14px] leading-[24px] tracking-[0.02em]"
 
     document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-[#727a8229] rounded-[32px] ";
 }
+if(fakeInput1.value !== "" && fakeInput2.value !== "" && fakeInput3.value !== "" && fakeInput4.value !== "" && fakeInput5.value !== "" && fakeInput6.value !== "" && real_input == 123456){
+    document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-secondaryGreen rounded-[32px] "
+
+}
+
 
 });
 document.querySelector(".digits").addEventListener("keydown", function(e){
@@ -235,10 +257,10 @@ document.querySelector(".digits").addEventListener("keydown", function(e){
 })
 
 
+// step 3 sumbit button
 document.querySelector('#page-3-button')
   .addEventListener('submit', (event) => {
-    // don't submit the form and
-    // only log to the console
+
     event.preventDefault();
     document.querySelector('form').submit();
 

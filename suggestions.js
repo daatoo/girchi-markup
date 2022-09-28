@@ -97,7 +97,7 @@ function clicking(clicked_id){
     var chose = document.getElementById("chose").innerText = children;
     document.getElementById("matchList-div").style.display = "none";
     choosen_div.className = "bg-[#292d330a] flex-row items-center justify-between px-[12px] py-[8px] gap-3 w-full min-h-[68px] rounded-[4px] cursor-pointer flex";
-
+    search.value = b
 }
 
 matchList_div.onclick = function(){
