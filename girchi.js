@@ -184,6 +184,7 @@ var fakeInput3 = document.getElementById("fakeInput3")
 var fakeInput4 = document.getElementById("fakeInput4")
 var fakeInput5 = document.getElementById("fakeInput5")
 var fakeInput6 = document.getElementById("fakeInput6")
+var real_input = document.getElementsByClassName("real-input") ;
 
 // Listen on the 'input' event inside the .digits area:
 document.querySelector(".digits").addEventListener("input", function(e){
@@ -206,7 +207,6 @@ e.target.onkeydown = function() {
   }
 }
 
-var real_input = document.getElementsByClassName("real-input") ;
 
 
 if(fakeInput1.value !== "" && fakeInput2.value !== "" && fakeInput3.value !== "" && fakeInput4.value !== "" && fakeInput5.value !== "" && fakeInput6.value !== ""){
@@ -260,9 +260,8 @@ document.querySelector(".digits").addEventListener("keydown", function(e){
 // step 3 sumbit button
 document.querySelector('#page-3-button')
   .addEventListener('submit', (event) => {
-
-    event.preventDefault();
-    document.querySelector('form').submit();
+        event.preventDefault();
+        document.querySelector('form').submit();
 
   });
 

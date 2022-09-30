@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="girchi.css">
+    <script src="https://kit.fontawesome.com/e84fd2aed4.js" crossorigin="anonymous"></script>
+
+    <script src="girchi.js"></script>
+    <link href="dist/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="bg-primaryColor">
+
+    <!--
+        header
+    -->
+    <header  class="w-full p-4 bg-white">
+        <div class='max-w-[1344px] mx-auto flex items-center justify-between'>
+            <div class='flex items-center gap-4'>
+                <img src="images/sitelogo.png" alt="logo">
+                <h1 class="font-bold text-2xl leading-[14px] text-mainGreen">გირჩი</h1>
+            </div>
+            <div class="flex gap-8">
+                <ul class="flex items-center gap-6">
+                    <li class="cursor-pointer">პოლიტიკოსები</li>
+                    <li class="cursor-pointer">ანალიტიკა</li>
+                    <li class="cursor-pointer">სიახლეები</li>
+                    <li class="cursor-pointer">პროექტები</li>
+                    <li class="cursor-pointer">გაზეთი</li>
+                </ul>
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex justify-center items-center bg-secondaryGreen rounded-[32px] cursor-pointer py-2 px-4 ">
+                        <span class="font-medium text-sm leading-6 tracking-[0.02em] text-white">ავტორიზაცია</span>
+                    </div>
+                    <div class="flex items-start p-[10.5px] w-10 aspect-square bg-primaryColor rounded-full">
+                        <img src="images/QR-code.png" alt="qr code">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--
+        end of header
+    -->
+
+
+
+    <!--
+        here starts section
+    -->
+    <section class="mt-8">
+
+        <div class='max-w-[1344px] mx-auto px-10 flex justify-center gap-8'>
+
+            <form action="" class=" relative w-3/5 max-w-[546px] rounded-lg flex flex-col bg-white ">
+
+
+            <!-- start ending -->
+            <div  id="end-div" class="w-full max-w-[546px] rounded-lg p-6 gap-10  flex flex-col bg-white ">
+                <h1 class="text-xl font-bold leading-6 text-mainBlack">გადარიცხვა</h1>
+
+                <div class="gap-6 flex flex-col">
+                    <div class="w-full flex items-center justify-center">
+                        <img src="images/StatusIcon.png" alt=""
+                        class="w-[72px] ">
+                    </div>
+    
+                    <p class="font-[500] text-sm leading-6 text-[#727A82] ">
+                        გილოცავ! გადარიცხვა წარმატებით დასრულდა. შეგიძლია, შენი გადარიცხვების ისტორია ნახო.
+                    </p>
+                </div>
+
+                <div class="w-full h-[1px] bg-bgGray "></div>
+
+
+                <div class="w-full flex justify-between items-center">
+                    <a href="">
+                        <p class="cursor-pointer font-medium text-[14px] leading-6 text-[#292D33] ">მთავარ გვერდზე გადასვლა</p>
+                    </a>
+                    <a href="" onclick="endclick();" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
+                    h-[40px] bg-[#727a8229] rounded-[32px] ">
+                        <p class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">დასრულება</p>
+                    </a>
+                </div>
+
+            </div>
+</form>
+
+            <!--
+                here starts div for "your balance"
+            -->
+            <div class="flex flex-col p-7 gap-6 w-2/5 h-[263px] max-w-[318px] bg-white rounded-lg">
+                <div class="banalsi1 flex items-center justify-between">
+                    <div>
+                        <h1 class="font-bols text-xl leading-6 " id="id">150 780 060</h1>
+                        <h3 class="font-medium text-sm leading-6 text-lightGray">შენი ბალანსი</h3>
+                    </div>
+                    <div
+                        class="flex justify-center items-center p-4 gap-2.5 w-12 aspect-square bg-[#F2F6EC] rounded-lg">
+                        <img class="" src="images/ged-icon-green.png" alt="">
+                    </div>
+                </div>
+                
+                <hr class='bg-bgGray'>
+                <div class="flex gap-2">
+                    <div>
+                        <p class="font-semibold text-sm leading-4 text-mainBlack">1 GeD = 32₾</p>
+                    </div>
+                    <img src="images/coolicon2.png" alt="">
+                </div>
+                
+                <div class="flex flex-col gap-1.5">
+                    <p class="font-medium text-xs leading-4 text-lightGray">გადააკოპირე და გაუზიარე სხვას</p>
+                    <div class="flex items-center gap-2">
+                        <div onclick="copylink()" id="copytext-div" class="group cursor-pointer flex justify-between items-center px-3 py-3.5  w-[80.1%] h-11 bg-white 
+                        border border-bgGray rounded-md">
+                            <p class="cursor-pointer overflow-hidden text-ellipsis h-4 font-medium text-sm leading-4 border-none outline-none text-lightGray"
+                                id="copyedtext">https://userId.com/s...</p>
+                            <div   class="">
+                                <span
+                                id="span" class="invisible group-hover:visible  absolute text-white  rounded-[4px] bg-[#292d33e6] px-2 py-1 translate-x-[-50%] ml-2.5 -translate-y-9">
+                                    <p id="copytext" class="font-medium text-xs leading-5 text-whitebg-white ">გადაკოპირება</p>
+                                    <span class=" absolute  w-[8px] h-[8px] rotate-45 ml-[50%]  translate-x-[-14px] bg-[#292d33e6]"></span>
+                                </span>
+                                <img id="copytext-icon" class="w-5 h-5 cursor-pointer "
+                                src="images/copyicon.png" alt="">
+                                <img id="checkmark-icon" class="w-[14px] h-[14px] mr-[3px] cursor-pointer hidden"
+                                src="images/check-mark.png" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-11 aspect-square bg-[#F3F3F4] rounded-md">
+                            <img src="./images/QR-code.png" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                here ends div for "your balance"
+            -->
+            
+        </div>
+
+    </section>
+    <!--
+        here ends section
+    -->
+    <script src="girchi.js"></script>
+    <script src="suggestions.js"></script>
+
+</body>
+
+</html>
