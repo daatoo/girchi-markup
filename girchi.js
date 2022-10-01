@@ -156,6 +156,16 @@ document.querySelector("#page-1-button").addEventListener("click", function(){
 })
 
 
+
+// edit icon in step 2 
+document.querySelector("#edit-icon").addEventListener("click", function(){
+    page_1.style.display = "flex";
+    page_2.style.display = "none";
+    page_3.style.display = "none";
+    search.className = "search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid  border-bgGray border-[1px] rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
+
+})
+
 //step 2 inputs
 
 let numOfGeds_input = document.getElementById("num-of-geds")
