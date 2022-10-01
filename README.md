@@ -1,4 +1,7 @@
 # girchi-markup
+email code input for succeed is  ```123456```
+
+for fail  ```111111```
 
 tailwindcss script:
 
