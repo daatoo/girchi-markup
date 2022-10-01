@@ -222,9 +222,7 @@ let sell_div_text = document.getElementById("sell-div-text");
 let buy_div_text = document.getElementById("buy-div-text");
 let donate_div_text = document.getElementById("donate-div-text");
 let itemName_input = document.getElementById("itemName-input");
-if(price_input.required){
-    console.log("required")
-}
+
 sell.onclick = function(){
 
     sell_div_text.className = "font-[500] text-[14px] leading-[24px] text-[#727A82] cursor-pointer";
@@ -233,6 +231,11 @@ sell.onclick = function(){
     price.className = "relative";
     itemname.className = "hidden";
     itemName_input.value = "";
+    price_input.setAttribute('required', '')
+    itemName_input.removeAttribute('required')
+    itemName_input.style.border = ""
+
+
 }
 buy.onclick = function(){
     sell_div_text.className = "font-[500] text-[14px] leading-[24px] text-[#1A8917] cursor-pointer";
@@ -241,6 +244,10 @@ buy.onclick = function(){
     price_input.value = "";
     itemname.className = "relative";
     price.className = "hidden";
+    itemName_input.setAttribute('required', '')
+    price_input.removeAttribute('required')
+    price_input.style.border = ""
+
 }
 donate.onclick = function(){
     sell_div_text.className = "font-[500] text-[14px] leading-[24px] text-[#727A82] cursor-pointer";
@@ -250,21 +257,34 @@ donate.onclick = function(){
     price.className = "hidden";
     itemname.className = "hidden";
     itemName_input.value = "";
+    price_input.removeAttribute('required')
+    itemName_input.removeAttribute('required')
+    price_input.style.border = ""
+    itemName_input.style.border = ""
+
 
 }
+
 
 
 
 // go to third step validation
 
 document.querySelector("#next-instep2").addEventListener("click", function(){
-if(!price_input.value){
+    console.log(price_input.required)
+    if(price_input.required && !price_input.value){
         price_input.style.border = "1px solid red"
+    }
+    if(itemName_input.required && !itemName_input.value){
+        itemName_input.style.border = "1px solid red"
+    }
+    if(itemName_input.value){
+        numOfGeds_input.style.border = ""
     }
     if(!numOfGeds_input.value){
         numOfGeds_input.style.border = "1px solid red"
     }
-    if(price_input.value){
+    if(price_input.value || !price_input.required){
         price_input.style.border = ""
     }
     if(numOfGeds_input.value){
@@ -273,10 +293,18 @@ if(!price_input.value){
     if(checkbox.className !== "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
         checkbox.className = "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-red-500 cursor-pointer "
     }
-    if(price_input.value && numOfGeds_input.value && checkbox.className == "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
-        page_1.style.display = "none";
-        page_2.style.display = "none";
-        page_3.style.display = "flex";
+    if(itemName_input.required || price_input.required){
+        if((price_input.value || itemName_input.value) && numOfGeds_input.value && checkbox.className == "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
+            page_1.style.display = "none";
+            page_2.style.display = "none";
+            page_3.style.display = "flex";
+        }
+    }else if(!itemName_input.required && !price_input.required){
+        if(numOfGeds_input.value && checkbox.className == "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
+            page_1.style.display = "none";
+            page_2.style.display = "none";
+            page_3.style.display = "flex";
+        }
     }
 })
 
