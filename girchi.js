@@ -271,7 +271,6 @@ donate.onclick = function(){
 // go to third step validation
 
 document.querySelector("#next-instep2").addEventListener("click", function(){
-    console.log(price_input.required)
     if(price_input.required && !price_input.value){
         price_input.style.border = "1px solid red"
     }
