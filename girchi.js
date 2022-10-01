@@ -183,13 +183,13 @@ document.querySelector(".page_2").addEventListener("input", function(e){
 
 
 
-    if(numOfGeds_input.value && price_input.value && checkbox.className == "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
+    if(numOfGeds_input.value && (price_input.value || itemName_input.value) && checkbox.className == "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
         next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-secondaryGreen   rounded-[32px]"
         next_p_tag.className = "text-white font-medium text-sm leading-6 tracking-[0.02em]"
         next_icon2.className = "fa-solid fa-chevron-right text-white text-[10px] font-bold "
 
     }
-    if(!numOfGeds_input.value || !price_input.value || checkbox.className !== "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
+    if(!numOfGeds_input.value || (!price_input.value && !itemName_input.value) || checkbox.className !== "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
         next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-[#727a8229]   rounded-[32px]"
         next_p_tag.className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
         next_icon2.className = "fa-solid fa-chevron-right text-lightGray text-[10px] font-bold"
@@ -246,6 +246,11 @@ sell.onclick = function(){
     price_input.setAttribute('required', '')
     itemName_input.removeAttribute('required')
     itemName_input.style.border = ""
+    if(!price_input.value){
+        next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-[#727a8229]   rounded-[32px]"
+        next_p_tag.className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
+        next_icon2.className = "fa-solid fa-chevron-right text-lightGray text-[10px] font-bold"
+    }
 
 
 }
@@ -259,6 +264,11 @@ buy.onclick = function(){
     itemName_input.setAttribute('required', '')
     price_input.removeAttribute('required')
     price_input.style.border = ""
+    if(!itemName_input.value){
+        next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-[#727a8229]   rounded-[32px]"
+        next_p_tag.className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
+        next_icon2.className = "fa-solid fa-chevron-right text-lightGray text-[10px] font-bold"
+    }
 
 }
 donate.onclick = function(){
@@ -377,9 +387,12 @@ document.querySelector(".digits").addEventListener("input", function(e){
     }
     if(fakeInput1.value == "" || fakeInput2.value == "" || fakeInput3.value == "" || fakeInput4.value == "" || fakeInput5.value == "" || fakeInput6.value == "" ){
         document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-[#727a8229] rounded-[32px] ";
+        document.getElementById("submit-pTag").className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
     }
     if(fakeInput1.value !== "" && fakeInput2.value !== "" && fakeInput3.value !== "" && fakeInput4.value !== "" && fakeInput5.value !== "" && fakeInput6.value !== "" ){
         document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-secondaryGreen rounded-[32px] "
+        document.getElementById("submit-pTag").className = "text-white font-medium text-sm leading-6 tracking-[0.02em]"
+
     }
     
 
@@ -405,7 +418,6 @@ document.querySelector('#page-3-button').addEventListener('click', (event) => {
 
         event.preventDefault();
         if(real_input == 123456) {
-
             fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
             fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
             fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
@@ -415,8 +427,7 @@ document.querySelector('#page-3-button').addEventListener('click', (event) => {
             document.getElementById("form").action = "girchi-succeed.html"
             document.querySelector('form').submit();
 
-        } else if(real_input == 123455){
-
+        } else if(real_input == 111111){
             fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
             fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
             fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
