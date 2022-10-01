@@ -14,6 +14,7 @@ const searchStates = async searchText => {
         const states = await res.json();
         return states;
       }
+
       
       searchTextt().then(states => {
         states; // fetched
@@ -111,6 +112,7 @@ remove_button.onclick = function() {
     document.getElementById("page-1-button").className = "cursor-pointer flex justify-center ml-auto items-center py-2 px-4 gap-1 w-[111px] h-10 bg-[#727a8229]  rounded-[32px]";
     document.getElementById("next-btText").className = "text-lightGray font-medium text-sm leading-6 tracking-[0.02em]"
     document.getElementById("next-icon").className = "fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "
+    search.value = ""
 }
 
 // end suggestions
@@ -404,6 +406,13 @@ document.querySelector('#page-3-button').addEventListener('click', (event) => {
             document.querySelector('form').submit();
 
         } else if(real_input == 123455){
+
+            fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
             document.getElementById("form").action = "girchi-fail.html"
             document.querySelector('form').submit();
 
