@@ -373,11 +373,11 @@ document.querySelector('#page-3-button').addEventListener('click', (event) => {
             fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
             fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
             fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
-            // document.getElementById("form").action = "girchi-succeed.html"
+            document.getElementById("form").action = "girchi-succeed.html"
             document.querySelector('form').submit();
 
         } else if(real_input == 123455){
-            // document.getElementById("form").action = "girchi-fail.html"
+            document.getElementById("form").action = "girchi-fail.html"
             document.querySelector('form').submit();
 
         }
