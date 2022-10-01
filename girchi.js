@@ -46,9 +46,9 @@ if(matches.length > 0){
              src="images/profile-picture.png">
             <div class="flex flex-col">
                 <h4 id="${match.capital}" class="font-normal text-[14px] leading-6 text-[#292D33] ">${match.name}  </h4>
-                <div class="flex h-5 w-full justify-center items-center">
+                <div class="flex h-5 w-full justify-center items-center gap-1">
                     <p class="font-medium text-[12px] leading-6 text-lightGray ">პ.ნ 4000*******</p>
-                    <p class="text-lightGray">.</p>
+                    <img src="images/point.svg" alt="">
                     <p  class="font-medium text-[12px] leading-5 text-lightGray ">ID: 433281</p>
                 </div>
             </div>
@@ -151,7 +151,7 @@ document.querySelector("#page-1-button").addEventListener("click", function(){
         page_3.style.display = "none";
         search.className = "search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid  border-bgGray rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
     }else{
-        search.className = "search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid border-[1px] border-red-500 rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
+        search.className = "search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid border-[1px] border-[#E34338] rounded-md h-11 placeholder:font-medium placeholder:text-sm placeholder:leading-4"
     }
 })
 
@@ -294,16 +294,16 @@ donate.onclick = function(){
 
 document.querySelector("#next-instep2").addEventListener("click", function(){
     if(price_input.required && !price_input.value){
-        price_input.style.border = "1px solid red"
+        price_input.style.border = "1px solid #E34338"
     }
     if(itemName_input.required && !itemName_input.value){
-        itemName_input.style.border = "1px solid red"
+        itemName_input.style.border = "1px solid #E34338"
     }
     if(itemName_input.value){
         numOfGeds_input.style.border = ""
     }
     if(!numOfGeds_input.value){
-        numOfGeds_input.style.border = "1px solid red"
+        numOfGeds_input.style.border = "1px solid #E34338"
     }
     if(price_input.value || !price_input.required){
         price_input.style.border = ""
@@ -312,7 +312,7 @@ document.querySelector("#next-instep2").addEventListener("click", function(){
         numOfGeds_input.style.border = ""
     }
     if(checkbox.className !== "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
-        checkbox.className = "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-red-500 cursor-pointer "
+        checkbox.className = "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#E34338] cursor-pointer "
     }
     if(itemName_input.required || price_input.required){
         if((price_input.value || itemName_input.value) && numOfGeds_input.value && checkbox.className == "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
@@ -383,7 +383,7 @@ document.querySelector(".digits").addEventListener("input", function(e){
         fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
         fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
         fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
-    
+        document.getElementById("incorrect-code").style.display = "none"
     }
     if(fakeInput1.value == "" || fakeInput2.value == "" || fakeInput3.value == "" || fakeInput4.value == "" || fakeInput5.value == "" || fakeInput6.value == "" ){
         document.getElementById("page-3-button").className = "cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] h-[40px] bg-[#727a8229] rounded-[32px] ";
@@ -411,7 +411,16 @@ document.querySelector(".digits").addEventListener("keydown", function(e){
 })
 
 
-
+//resend button 
+document.querySelector("#resend-code").addEventListener("click", function(){
+    fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+    fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+    fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+    fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+    fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+    fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E0E2E7] rounded-[6px] font-bold text-base text-[#292D33] "
+    document.getElementById("incorrect-code").style.display = "none"
+})
 
 //step 3 sumbit button
 document.querySelector('#page-3-button').addEventListener('click', (event) => {
@@ -439,12 +448,14 @@ document.querySelector('#page-3-button').addEventListener('click', (event) => {
 
         }
         else {
-            fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
-            fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
-            fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
-            fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
-            fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
-            fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-red-500 rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput1.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E34338] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput2.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E34338] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput3.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E34338] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput4.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E34338] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput5.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E34338] rounded-[6px] font-bold text-base text-[#292D33] "
+            fakeInput6.className = "flex flex-col items-center px-[14px] pt-[12px] pb-[12px] gap-2 w-10 h-14 bg-white border-[1px] border-solid border-[#E34338] rounded-[6px] font-bold text-base text-[#292D33] "
+            document.getElementById("incorrect-code").style.display = "flex"
+            document.getElementById("resend-code").style.display = "flex"
         }
 
   }
