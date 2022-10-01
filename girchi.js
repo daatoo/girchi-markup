@@ -10,13 +10,13 @@ const fax = document.getElementById("fax");
 
 const searchStates = async searchText => {
     async function searchTextt() {
-        const res = await fetch('/index.json');
+        const res = await fetch('index.json');
         const states = await res.json();
         return states;
       }
       
       searchTextt().then(states => {
-        states; // fetched movies
+        states; // fetched
         var matches = states.filter(state =>{
             const regex = new RegExp(`^${searchText}`, 'gi');
             if(searchText != state.name.match(regex)){
