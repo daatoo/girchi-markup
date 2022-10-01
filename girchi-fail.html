@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="girchi.css">
+    <script src="https://kit.fontawesome.com/e84fd2aed4.js" crossorigin="anonymous"></script>
+    <script src="suggestions.js"></script>
+
+    <link href="dist/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="bg-primaryColor">
+
+    <!--
+        header
+    -->
+    <header  class="w-full p-4 bg-white">
+        <div class='max-w-[1344px] mx-auto flex items-center justify-between'>
+            <div class='flex items-center gap-4'>
+                <img src="images/sitelogo.png" alt="logo">
+                <h1 class="font-bold text-2xl leading-[14px] text-mainGreen">გირჩი</h1>
+            </div>
+            <div class="flex gap-8">
+                <ul class="flex items-center gap-6">
+                    <li class="cursor-pointer">პოლიტიკოსები</li>
+                    <li class="cursor-pointer">ანალიტიკა</li>
+                    <li class="cursor-pointer">სიახლეები</li>
+                    <li class="cursor-pointer">პროექტები</li>
+                    <li class="cursor-pointer">გაზეთი</li>
+                </ul>
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex justify-center items-center bg-secondaryGreen rounded-[32px] cursor-pointer py-2 px-4 ">
+                        <span class="font-medium text-sm leading-6 tracking-[0.02em] text-white">ავტორიზაცია</span>
+                    </div>
+                    <div class="flex items-start p-[10.5px] w-10 aspect-square bg-primaryColor rounded-full">
+                        <img src="images/QR-code.png" alt="qr code">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--
+        end of header
+    -->
+
+
+    <!--
+        here starts section
+    -->
+    <section class="mt-8" id="secdd">
+
+        <div class='max-w-[1344px] mx-auto px-10 flex justify-center gap-8'>
+
+            <!-- start ending for fail -->
+            <div  id="end-div-fail" class="w-full max-w-[546px] rounded-lg p-6 gap-10  flex flex-col bg-white ">
+                <h1 class="text-xl font-bold leading-6 text-mainBlack">გადარიცხვა</h1>
+
+                <div class="gap-6 flex flex-col">
+                    <div class="w-full flex items-center justify-center">
+                        <img src="images/failIcon.png" alt=""
+                        class="w-[72px] ">
+                    </div>
+    
+                    <p class="font-[500] text-sm leading-6 text-[#727A82] ">
+                        მოხდა შეცდომა. ერორის რომელიმე ტიპის აღმწერელი ტექსტი არის აქ საჭირო                    </p>
+                </div>
+
+                <div class="w-full h-[1px] bg-bgGray "></div>
+
+
+                <div class="w-full flex justify-between items-center">
+                    <a href="">
+                        <p class="cursor-pointer font-medium text-[14px] leading-6 text-[#292D33] ">მთავარ გვერდზე გადასვლა</p>
+                    </a>
+                    <a href="" onclick="endclick();" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
+                    h-[40px] bg-[#727a8229] rounded-[32px] ">
+                        <p class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">დასრულება</p>
+                    </a>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+    </section>
+    <!--
+        here ends section
+    -->
+
+</body>
+
+</html>

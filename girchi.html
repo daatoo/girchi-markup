@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="girchi.css">
     <script src="https://kit.fontawesome.com/e84fd2aed4.js" crossorigin="anonymous"></script>
 
-    <script src="girchi.js"></script>
+    <!-- <script src="girchi.js"></script> -->
     <link href="dist/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -57,7 +57,8 @@
 
         <div class='max-w-[1344px] mx-auto px-10 flex justify-center gap-8'>
 
-            <form action="girchiend.html" class=" relative w-3/5 max-w-[546px] rounded-lg flex flex-col bg-white ">
+            <form action="girchi-fail.html" class=" relative w-3/5 max-w-[546px] rounded-lg flex flex-col bg-white " id="form">
+                <!-- <img src="fav.ico" alt=""> -->
                                 <!--
                 here starts div for step 1
             -->
@@ -106,7 +107,7 @@
                 </div>
 
                 <div class="w-full h-[1px] bg-bgGray mt-6"></div>
-                <div onclick="page_1_click();" id="page-1-button"
+                <div  id="page-1-button"
                     class="cursor-pointer flex justify-center ml-auto items-center py-2 px-4 gap-1 w-[111px] h-10 bg-[#727a8229] rounded-[32px]">
                     <p id="next-btText" class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">შემდეგი</p>
                     <i id="next-icon" class="fa-solid fa-chevron-right text-lightGray text-[10px] font-bold "></i>
@@ -179,7 +180,7 @@
                 </div>
              
                 <div class="flex flex-col gap-1.5">
-                    <div id="gadaricxvis-danishnuleba" class="flex items-center mt-6 cursor-pointer ">
+                    <div id="transfer-aim" class="flex items-center mt-6 cursor-pointer ">
                         <img  src="images/plus-icon.png" alt="">
                         <h3 class="font-medium text-sm ml-[7.33px] leading-4 text-lightGray ">გადარიცხვის დანიშნულება</h3>
                     </div>
@@ -193,14 +194,14 @@
                     <div class="flex justify-between gap-[11px]">
                         <div class="relative z-3">
                             <i id="check" class="hidden z-1"></i>                    
-                            <input id="checkbox" onclick="onclickevent(this);" 
+                            <input id="checkbox"  
                             class="z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252]
                               cursor-pointer" type="checkbox" name="checkbox" id="checkbox"  required>
                         </div>
                         <label for="checkbox" class=" font-medium text-sm leading-4 text-lightGray">ვეთანხმები <a href="#">
                             <span class="text-[#4D73FA] cursor-pointer ">გირჩის კონსტიტუციას</span></a></label>
                     </div>
-                    <div id="next" onclick="page_2_click();" class=" cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 
+                    <div id="next-instep2"  class=" cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 
                     bg-[#727a8229]   rounded-[32px] ">
                         <p id="next-p-tag"  class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">შემდეგი</p>
                         
@@ -275,8 +276,8 @@
 
                 <div  class="w-full flex justify-between">
                     <h1 id="goBack" onclick="page_3_goBack();" class="cursor-pointer font-medium text-[14px] leading-6 text-[#292D33] ">უკან დაბრუნება</h1>
-                    <button  id="page-3-button" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
-                    h-[40px] bg-[#727a8229] rounded-[32px] "><p class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">დადასტურება</p></button>
+                    <div id="page-3-button" class="cursor-pointer flex flex-row  justify-center items-center gap-[4px] w-[138px] 
+                    h-[40px] bg-[#727a8229] rounded-[32px] "><p class="text-lightGray font-medium text-sm leading-6 tracking-[0.02em]">დადასტურება</p></div>
                 </div>
 
             </div>
@@ -310,7 +311,7 @@
                 <div class="flex flex-col gap-1.5">
                     <p class="font-medium text-xs leading-4 text-lightGray">გადააკოპირე და გაუზიარე სხვას</p>
                     <div class="flex items-center gap-2">
-                        <div onclick="copylink()" id="copytext-div" class="group cursor-pointer flex justify-between items-center px-3 py-3.5  w-[80.1%] h-11 bg-white 
+                        <div  id="copytext-div" class="group cursor-pointer flex justify-between items-center px-3 py-3.5  w-[80.1%] h-11 bg-white 
                         border border-bgGray rounded-md">
                             <p class="cursor-pointer overflow-hidden text-ellipsis h-4 font-medium text-sm leading-4 border-none outline-none text-lightGray"
                                 id="copyedtext">https://userId.com/s...</p>
@@ -342,7 +343,6 @@
     <!--
         here ends section
     -->
-    <script src="girchi.js"></script>
     <script src="suggestions.js"></script>
 
 </body>
