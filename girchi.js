@@ -176,13 +176,9 @@ let checkbox = document.getElementById("checkbox")
 let next_icon1 = document.getElementById("next-icon1");
 let next_icon2 = document.getElementById("next-icon2");
 
-
 document.querySelector(".page_2").addEventListener("input", function(e){
-    e.target.value = e.target.value.replace(/[^0-9]/g,'');
-
-
-
-
+    price_input.value =  price_input.value.replace(/[^0-9]/g,'')
+    numOfGeds_input.value =  numOfGeds_input.value.replace(/[^0-9]/g,'')
     if(numOfGeds_input.value && (price_input.value || itemName_input.value) && checkbox.className == "z-3 flex items-center justify-center appearance-none w-[18px] h-[18px]  border-solid border-2 rounded-[3px] border-[#727a8252] cursor-pointer bg-secondaryGreen"){
         next_button.className = " cursor-pointer flex justify-center items-center   gap-1 w-[111px] h-10 bg-secondaryGreen   rounded-[32px]"
         next_p_tag.className = "text-white font-medium text-sm leading-6 tracking-[0.02em]"
